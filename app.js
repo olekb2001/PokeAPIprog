@@ -33,7 +33,8 @@ async function getPokemon(){
         pokemonCryButton.textContent = 'pokemon sound';
         pokemonCryButton.classList.add('btn', 'btn-primary');
         pokemonCryButton.addEventListener('click', () => {
-            const pokemonCry = new Audio(data.cries.latest);
+            const pokemonCry = new Audio(data.cries.legacy);
+            pokemonCry.volume = 0.3;
             pokemonCry.play();
         });
 
